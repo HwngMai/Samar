@@ -5,20 +5,64 @@ jQuery(document).ready(function( $ ) {
         time: 1000 
     });
     });
-// owlCarousel
-$('.owl-carousel').owlCarousel({
+// owlCarousel1
+$('.owl-one').owlCarousel({
     loop:true,
-    margin:10,
     nav:true,
-    autoplay:true,
-    autoplayTimeout:2000,
+    dots:true,
+    margin: 15,
+    autoplay:false,
+    autoplayTimeout:3000,
     autoplayHoverPause:true,
     responsive:{
         0:{
-            items:1
+            items:1,
+            nav:true,
+            dots:true,
+        },
+        600:{
+          items:2,
+          nav:true,
+          dots:true,
+        },
+        900:{
+          items:3
         },
     }
-})
+});
+$('.owl-two').owlCarousel({
+  loop:true,
+  nav:false,
+  dots:true,
+  margin: 30,
+  autoplay:false,
+  autoplayTimeout:3000,
+  smartSpeed:1000,
+  autoplayHoverPause:true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true,
+          dots:true,
+      },
+  }
+});
+$('.owl-three').owlCarousel({
+  loop:true,
+  nav:false,
+  dots:true,
+  autoplay:false,
+  autoplayTimeout:3000,
+  smartSpeed:1000,
+  autoplayHoverPause:true,
+  responsive:{
+      0:{
+          items:3,
+          nav:true,
+          dots:true,
+      },
+  }
+});
 // SmoothScroll
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -44,3 +88,23 @@ $(document).ready(function(){
     } // End if
   });
 });
+// Fancybox
+Fancybox.bind("#gallery a", {
+  groupAll: true, // Group all items
+  on: {
+    ready: (fancybox) => {
+      console.log(`fancybox #${fancybox.id} is ready!`);
+    },
+  },
+});
+// WOW animate
+// wow = new WOW(
+//   {
+//   boxClass:     'wow',      // default
+//   animateClass: 'animated', // default
+//   offset:       0,          // default
+//   mobile:       true,       // default
+//   live:         true        // default
+// }
+// )
+// wow.init();
