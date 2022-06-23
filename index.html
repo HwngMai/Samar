@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samar</title>
+
+    <!-- icon tab -->
     <link rel="shortcut icon" href="./img/circle.png" type="image/x-icon" />
     <!-- https://cybersamar.vercel.app -->
     <!-- reset css -->
@@ -100,7 +102,7 @@
             </h2>
           </div>
           <div class="article carou__article">
-            <p class="animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="animate__animated animate__fadeInUp animate__delay-2s">
               We develop the relationships that underpin the next phase in your
               <br />
               organisation’s growth.
@@ -1000,12 +1002,9 @@
       </div>
     </footer>
     <!-- back to top btn -->
-    <a
-      href="#"
-      class="backToTop cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
-    >
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
       <i class="fa fa-arrow-up"></i>
-    </a>
+    </button>
     <!-- ----SCRIPT---- -->
     <!-- JQUERY -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -1032,10 +1031,34 @@
       wow = new WOW({
         boxClass: "wow", // default
         animateClass: "animated", // default
-        offset: -300, // default
+        offset: -150, // default
         mobile: true, // default
         live: true, // default
       }).init();
+    </script>
+    <!-- back to top script -->
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
   </body>
 </html>

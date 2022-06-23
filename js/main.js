@@ -5,7 +5,7 @@ jQuery(document).ready(function( $ ) {
         time: 1000 
     });
     });
-// owlCarousel1
+// owlCarousel
 $('.owl-one').owlCarousel({
     loop:true,
     nav:true,
@@ -97,14 +97,4 @@ Fancybox.bind("#gallery a", {
     },
   },
 });
-// WOW animate
-// wow = new WOW(
-//   {
-//   boxClass:     'wow',      // default
-//   animateClass: 'animated', // default
-//   offset:       0,          // default
-//   mobile:       true,       // default
-//   live:         true        // default
-// }
-// )
-// wow.init();
+
