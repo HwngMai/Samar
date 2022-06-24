@@ -8,3 +8,5 @@ simple landing page w/
 - 2 slider w/ 1 nav using slick
 - glass animation hover 
 - rotate animation img
+- fancybox gallery
+- counter up js
