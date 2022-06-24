@@ -1,0 +1,16 @@
+.nav {
+    border: 1px solid #000;
+    text-align: center;
+    cursor: pointer;
+    min-height:50px;
+  }
+  
+  .navigator {
+    border: 1px solid #000;
+    text-align: center;
+    cursor: pointer;
+    min-height:50px;
+  }
+  .slick-slide {
+   min-height:50px; 
+  }

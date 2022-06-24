@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- slick -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./slick-1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./slick-1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="./testslick.css" />
+  </head>
+  <body>
+    <div class="primary nav">
+      <div style="background-color: red">primary 1</div>
+      <div style="background-color: yellow">primary 2</div>
+      <div style="background-color: green">primary 3</div>
+      <div style="background-color: yellow">primary 4</div>
+    </div>
+    <div class="navigator">
+      <div style="background-color: red">navigator 1</div>
+      <div style="background-color: yellow">navigator 2</div>
+      <div style="background-color: green">navigator 3</div>
+      <div style="background-color: yellow">navigator 4</div>
+    </div>
+    <div class="secondary nav">
+      <div style="background-color: red">secondary 1</div>
+      <div style="background-color: yellow">secondary 2</div>
+      <div style="background-color: green">secondary 3</div>
+      <div style="background-color: yellow">secondary 4</div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- SLICK -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./slick-1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var slickPrimarySecondary = {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          infinite: false,
+        };
+        var slickNavigator = {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          asNavFor: ".nav",
+          speed: 500,
+          dots: true,
+          focusOnSelect: true,
+          centerMode: false,
+          infinite: false,
+        };
+        $(".primary").slick(slickPrimarySecondary);
+        $(".secondary").slick(slickPrimarySecondary);
+        $(".navigator").slick(slickNavigator);
+      });
+    </script>
+  </body>
+</html>

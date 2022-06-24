@@ -33,6 +33,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <!-- slick -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./slick-1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./slick-1.8.1/slick/slick-theme.css"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <!-- lineawesome -->
     <link
       rel="stylesheet"
@@ -666,12 +687,14 @@
     </div>
     <!-- start FEEDBACK -->
     <div class="feedback">
+      <div class="primary"></div>
+      <div class="navigator"></div>
       <div class="feedback__title title">
         <p>Testimonial</p>
         <h2>What Our Clients Say’s</h2>
       </div>
       <div class="feedback__content">
-        <div class="feedback__thumb owl-carousel owl-three owl-theme">
+        <div class="feedback__thumb primary">
           <div class="thumb__item thumb__mainitem">
             <img src="./img/pic1_4.jpg" alt="" />
             <div class="shape-1"></div>
@@ -685,7 +708,7 @@
             <img src="./img/pic3_3.jpg" alt="" />
           </div>
         </div>
-        <div class="feedback__comment owl-carousel owl-two owl-theme">
+        <div class="navigator feedback__comment">
           <div class="comment__item">
             <i class="icon__qoute">
               <i class="fa fa-quote-left"></i>
@@ -702,7 +725,7 @@
             <i class="icon__qoute">
               <i class="fa fa-quote-left"></i>
             </i>
-            <h3>Cak Dikin 1</h3>
+            <h3>Cak Dikin 2</h3>
             <p><span>CEO & Founder </span></p>
             <p>
               Duis feugiat est tincidunt ligula maximus convallis. Aenean
@@ -714,7 +737,7 @@
             <i class="icon__qoute">
               <i class="fa fa-quote-left"></i>
             </i>
-            <h3>Cak Dikin 1</h3>
+            <h3>Cak Dikin 3</h3>
             <p><span>CEO & Founder </span></p>
             <p>
               Duis feugiat est tincidunt ligula maximus convallis. Aenean
@@ -1001,6 +1024,7 @@
         </div>
       </div>
     </footer>
+
     <!-- back to top btn -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <i class="fa fa-arrow-up"></i>
@@ -1010,10 +1034,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- WAYPOINTS -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <!-- EXT-JS -->
+    <!-- COUNT-UP -->
     <script src="./js/jquery.counterup.min.js"></script>
     <!-- OWL CAROUSEL -->
     <script src="./js/owl.carousel.min.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- MAIN-JS -->
     <script src="./js/main.js"></script>
     <!-- FANCYBOX -->
@@ -1027,6 +1053,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- WOW -->
     <script>
       wow = new WOW({
         boxClass: "wow", // default
@@ -1059,6 +1086,54 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- SLICK -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./slick-1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var slickPrimarySecondary = {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          infinite: false,
+          asNavFor: ".primary",
+          autoplay: true,
+          speed: 300,
+          autoplayspeed: 1000,
+        };
+        var slickNavigator = {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          asNavFor: ".primary",
+          speed: 300,
+          dots: true,
+          autoplay: true,
+          autoplayspeed: 1000,
+          focusOnSelect: true,
+          centerMode: false,
+          infinite: false,
+        };
+        $(".primary").slick(slickPrimarySecondary);
+        $(".secondary").slick(slickPrimarySecondary);
+        $(".navigator").slick(slickNavigator);
+      });
     </script>
   </body>
 </html>
