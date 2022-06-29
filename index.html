@@ -861,14 +861,14 @@
           </div>
         </div>
         <div
-          class="footer__body wow animate__ animate__fadeInUp animated"
+          class="footer__body wow animate__ animate__fadeIn animated"
           data-wow-duration="2s"
           data-wow-delay="0.2s"
           style="
             visibility: visible;
             animation-duration: 2s;
             animation-delay: 0.2s;
-            animation-name: fadeInUp;
+            animation-name: fadeIn;
           "
         >
           <div class="footer__item">
@@ -1114,9 +1114,9 @@
           fade: true,
           infinite: false,
           asNavFor: ".primary",
-          autoplay: true,
           speed: 300,
-          autoplayspeed: 1000,
+          autoplayspeed: 500,
+          autoplay: true,
         };
         var slickNavigator = {
           slidesToShow: 1,
@@ -1124,9 +1124,8 @@
           asNavFor: ".primary",
           speed: 300,
           dots: true,
+          autoplayspeed: 500,
           autoplay: true,
-          autoplayspeed: 1000,
-          focusOnSelect: true,
           centerMode: false,
           infinite: false,
         };

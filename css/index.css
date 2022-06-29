@@ -1003,6 +1003,23 @@ footer a {
 .footer__copyright span {
   color: var(--main-color);
 }
+.footer__item h3::after, .footer__item h3::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 20px;
+  background: var(--grad-color);
+  background-size: 200%;
+}
+.footer__item h3::before {
+  width: 1rem;
+}
+.footer__item h3::after {
+  width: 3rem;
+  left: 1.5rem;
+}
 .backToTop {
   width: 3rem;
   height: 3rem;
